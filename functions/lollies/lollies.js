@@ -3,13 +3,13 @@ const faunadb = require("faunadb"),
   q = faunadb.query
 const shortid = require("shortid")
 const fetch = require("node-fetch")
-var curl = require("curl-cmd")
-function run1() {
-  fetch("https://api.netlify.com/build_hooks/5f9a99467867c005d354dcb7", {
-    method: "post",
-  })
-    .then(res => res.json())
-    .then(json => console.log(json))
+
+async function run1() {
+  const url = "https://api.netlify.com/build_hooks/5f9a99467867c005d354dcb7"
+  const params = {
+    method: "POST",
+  }
+  await fetch(url, params)
 }
 const typeDefs = gql`
   type Query {
@@ -93,11 +93,7 @@ const resolvers = {
           },
         })
       )
-      curl.cmd({
-        host: "https://api.netlify.com/build_hooks/5f9a99467867c005d354dcb7",
-
-        method: "POST",
-      })
+      run1()
 
       return result.data
     },
