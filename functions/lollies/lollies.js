@@ -45,7 +45,7 @@ const resolvers = {
         )
         console.log(result.data)
 
-        return result?.data?.map(d => {
+        return result.data.map(d => {
           return {
             id: d.ts,
             color1: d.data.color1,
