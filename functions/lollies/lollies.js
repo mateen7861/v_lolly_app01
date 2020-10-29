@@ -3,6 +3,7 @@ const faunadb = require("faunadb"),
   q = faunadb.query
 const shortid = require("shortid")
 const fetch = require("node-fetch")
+var curl = require("curl-cmd")
 function run1() {
   fetch("https://api.netlify.com/build_hooks/5f9a99467867c005d354dcb7", {
     method: "post",
@@ -92,7 +93,11 @@ const resolvers = {
           },
         })
       )
-      run1()
+      curl.cmd({
+        host: "https://api.netlify.com/build_hooks/5f9a99467867c005d354dcb7",
+
+        method: "POST",
+      })
 
       return result.data
     },

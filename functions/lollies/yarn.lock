@@ -528,6 +528,13 @@ cssfilter@0.0.10:
   resolved "https://registry.yarnpkg.com/cssfilter/-/cssfilter-0.0.10.tgz#c6d2672632a2e5c83e013e6864a42ce8defd20ae"
   integrity sha1-xtJnJjKi5cg+AT5oZKQs6N79IK4=
 
+curl-cmd@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/curl-cmd/-/curl-cmd-0.0.1.tgz#2ae2366da0c870c8ff3c843e4115babb7985bfae"
+  integrity sha1-KuI2baDIcMj/PIQ+QRW6u3mFv64=
+  dependencies:
+    shell-escape "0.2.0"
+
 curlrequest@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/curlrequest/-/curlrequest-1.0.1.tgz#cd3d8e04e81d7996b0a1cd9716cb09d50b41d50f"
@@ -1056,6 +1063,11 @@ sha.js@^2.4.11:
   dependencies:
     inherits "^2.0.1"
     safe-buffer "^5.0.1"
+
+shell-escape@0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/shell-escape/-/shell-escape-0.2.0.tgz#68fd025eb0490b4f567a027f0bf22480b5f84133"
+  integrity sha1-aP0CXrBJC09WegJ/C/IkgLX4QTM=
 
 shortid@^2.2.16:
   version "2.2.16"
