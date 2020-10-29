@@ -14,9 +14,14 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     }
   `)
-  console.log("-------------------------------")
-  console.log("-------------------------------")
-  console.log(data)
-  console.log("-------------------------------")
-  console.log("-------------------------------")
+
+  data.get_lollies.getLollies.forEach(node => {
+    createPage({
+      path: `/${node.color1}`,
+      component: path.resolve("./src/templates/template.tsx"),
+      context: {
+        color1: node.color1,
+      },
+    })
+  })
 }
