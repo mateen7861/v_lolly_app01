@@ -28,15 +28,14 @@ const typeDefs = gql`
     ): lolly
   }
 `
+var adminClient = new faunadb.Client({
+  secret: process.env.FAUNA,
+})
 
 const resolvers = {
   Query: {
     getLollies: async (root, args, context) => {
       try {
-        var adminClient = new faunadb.Client({
-          secret: "fnAD5UfzmsACBzRo6jqX8DbQQ4xDpL4bWA1Dp5Pz",
-        })
-
         const result = await adminClient.query(
           q.Map(
             q.Paginate(q.Match(q.Index("lolly"))),
@@ -67,10 +66,6 @@ const resolvers = {
       _,
       { color1, color2, color3, sender, reciever, message }
     ) => {
-      var adminClient = new faunadb.Client({
-        secret: "fnAD5UfzmsACBzRo6jqX8DbQQ4xDpL4bWA1Dp5Pz",
-      })
-
       console.log(color1, color2, color3, sender, reciever, message)
       const result = await adminClient.query(
         q.Create(q.Collection("lollies"), {
