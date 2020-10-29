@@ -86,15 +86,6 @@ const resolvers = {
           },
         })
       )
-      curl.request(
-        {
-          url: "https://api.netlify.com/build_hooks/5f9a99467867c005d354dcb7",
-          method: "POST",
-        },
-        function (err, stdout, meta) {
-          console.log("%s %s", meta.cmd, meta.args.join(" "))
-        }
-      )
 
       return result.data
     },
