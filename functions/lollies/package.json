@@ -19,6 +19,7 @@
     "curlrequest": "^1.0.1",
     "faunadb": "^3.0.1",
     "graphql": "^14.1.1",
+    "node-fetch": "^2.6.1",
     "request": "^2.88.2",
     "shortid": "^2.2.16"
   }
