@@ -8,16 +8,17 @@ module.exports = {
   plugins: [
     "gatsby-plugin-typescript",
     `gatsby-plugin-material-ui`,
-    // {
-    //   resolve: "gatsby-source-graphql",
-    //   options: {
-    //     // This type will contain remote schema Query type
-    //     typeName: "GCMS",
-    //     // This is field under which it's accessible
-    //     fieldName: "get_lollies",
-    //     // Url to query from
-    //     url: "https://vlolly-by-mateen.netlify.app/.netlify/functions/lollies",
-    //   },
-    // },
+    {
+      resolve: "gatsby-source-graphql",
+      options: {
+        // This type will contain remote schema Query type
+        typeName: "GCMS",
+        // This is field under which it's accessible
+        fieldName: "get_lollies",
+        // Url to query from
+        url:
+          "https://elastic-yalow-e229db.netlify.app/.netlify/functions/lollies",
+      },
+    },
   ],
 }

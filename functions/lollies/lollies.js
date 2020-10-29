@@ -34,7 +34,7 @@ const resolvers = {
     getLollies: async (root, args, context) => {
       try {
         var adminClient = new faunadb.Client({
-          secret: "fnAD5P_7Z-ACByYQ3YzN9dfrLFbjYMStU-06iUhl",
+          secret: "fnAD5UfzmsACBzRo6jqX8DbQQ4xDpL4bWA1Dp5Pz",
         })
 
         const result = await adminClient.query(
@@ -68,7 +68,7 @@ const resolvers = {
       { color1, color2, color3, sender, reciever, message }
     ) => {
       var adminClient = new faunadb.Client({
-        secret: "fnAD5P_7Z-ACByYQ3YzN9dfrLFbjYMStU-06iUhl",
+        secret: "fnAD5UfzmsACBzRo6jqX8DbQQ4xDpL4bWA1Dp5Pz",
       })
 
       console.log(color1, color2, color3, sender, reciever, message)
