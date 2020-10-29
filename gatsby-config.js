@@ -17,7 +17,7 @@ module.exports = {
         fieldName: "get_lollies",
         // Url to query from
         url:
-          "https://elastic-yalow-e229db.netlify.app/.netlify/functions/lollies",
+          "https://virtual-lolly-by-mateen.netlify.app/.netlify/functions/lollies",
       },
     },
   ],
