@@ -3,6 +3,18 @@ const faunadb = require("faunadb"),
   q = faunadb.query
 const shortid = require("shortid")
 var curl = require("curlrequest")
+var request = require("request")
+
+var options = {
+  url: "https://api.netlify.com/build_hooks/5f9a99467867c005d354dcb7",
+  method: "POST",
+}
+
+function callback(error, response, body) {
+  if (!error && response.statusCode == 200) {
+    console.log(body)
+  }
+}
 
 const typeDefs = gql`
   type Query {
@@ -86,6 +98,7 @@ const resolvers = {
           },
         })
       )
+      request(options, callback)
 
       return result.data
     },
