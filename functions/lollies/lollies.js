@@ -3,13 +3,7 @@ const faunadb = require("faunadb"),
   q = faunadb.query
 const shortid = require("shortid")
 const fetch = require("node-fetch")
-function runWH() {
-  fetch("https://api.netlify.com/build_hooks/5f9a99467867c005d354dcb7", {
-    method: "post",
-  })
-    .then(res => res.json())
-    .then(json => console.log(json))
-}
+
 const typeDefs = gql`
   type Query {
     getLollies: [lolly]
@@ -92,7 +86,6 @@ const resolvers = {
           },
         })
       )
-      runWH()
 
       return result.data
     },
