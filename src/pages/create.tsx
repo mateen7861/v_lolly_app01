@@ -68,7 +68,7 @@ const Create = () => {
 
         },
     });
-    console.log(data?.addLolly?.link)
+
 
     return (
         <div className="create">
