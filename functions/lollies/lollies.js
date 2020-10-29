@@ -2,15 +2,7 @@ const { ApolloServer, gql } = require("apollo-server-lambda")
 const faunadb = require("faunadb"),
   q = faunadb.query
 const shortid = require("shortid")
-const fetch = require("node-fetch").default
 
-async function run1() {
-  const url = "https://api.netlify.com/build_hooks/5f9a99467867c005d354dcb7"
-  const params = {
-    method: "POST",
-  }
-  await fetch(url, params)
-}
 const typeDefs = gql`
   type Query {
     getLollies: [lolly]
@@ -93,7 +85,6 @@ const resolvers = {
           },
         })
       )
-      run1()
 
       return result.data
     },
