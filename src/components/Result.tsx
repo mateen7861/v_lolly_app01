@@ -10,7 +10,7 @@ const Result: React.FC<ResultProps> = ({ link, reciever, message, sender }) => {
     return (
         <div className="result">
             <h4>Share lolly with this link:</h4>
-            <h3>{`https://vlolly-by-mateen.netlify.app/lolly/${link}`}</h3>
+            <h3>{`https://virtual-lolly-by-mateen.netlify.app/lolly/${link}`}</h3>
             <div className="result__details">
                 <p className="reciever">{reciever}</p>
                 <p className="message">{message}</p>
